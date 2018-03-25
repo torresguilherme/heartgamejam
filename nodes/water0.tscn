@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://nodes/water0.gd" type="Script" id=1]
+[ext_resource path="res://sprites/black-screen.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 510, 296.432 )
+
+[sub_resource type="Shader" id=2]
+
+code = "shader_type canvas_item;
+
+uniform float compression = 0.5;
+uniform vec4 waterColor = vec4(0.0, 2.0, 2.0, 0.1);
+
+void fragment()
+{
+	COLOR = vec4(textureLod(SCREEN_TEXTURE, vec2(UV.x, UV.y - 0.5), 0.0).rgb + waterColor.rgb, 0.2);
+}"
+
+[sub_resource type="ShaderMaterial" id=3]
+
+render_priority = 0
+shader = SubResource( 2 )
+shader_param/compression = null
+shader_param/waterColor = null
+
+[node name="water0" type="Area2D"]
+
+position = Vector2( 5040, 3360 )
+scale = Vector2( 15, 10 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 2
+collision_mask = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
+
+material = SubResource( 3 )
+position = Vector2( 1.03225, 1.03226 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Material", "Transform" ]
+
+[node name="Tween" type="Tween" parent="." index="2"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[connection signal="area_entered" from="." to="." method="_on_water0_area_entered"]
+
+[connection signal="area_exited" from="." to="." method="_on_water0_area_exited"]
+
+[connection signal="body_entered" from="." to="." method="_on_water0_body_entered"]
+
+[connection signal="body_exited" from="." to="." method="_on_water0_body_exited"]
+
+

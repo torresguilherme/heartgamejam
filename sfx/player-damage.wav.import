@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/player-damage.wav-e6539c95454d054e400216d388ff4665.sample"
+
+[deps]
+
+source_file="res://sfx/player-damage.wav"
+source_md5="1d319b93cf86381fad148e3496473dfa"
+
+dest_files=[ "res://.import/player-damage.wav-e6539c95454d054e400216d388ff4665.sample" ]
+dest_md5="05b67125c0df6b2f4758930dd46b88a3"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

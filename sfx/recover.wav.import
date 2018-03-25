@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/recover.wav-c196905f24ea73a70b700ecceb84da3a.sample"
+
+[deps]
+
+source_file="res://sfx/recover.wav"
+source_md5="7f202546bfa4be80b7ad6a7d67c0ba36"
+
+dest_files=[ "res://.import/recover.wav-c196905f24ea73a70b700ecceb84da3a.sample" ]
+dest_md5="c79211486d894ffffdd961b276a944a9"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/water-drain.wav-da3916e93d93dd63d2585fa4fa096bf0.sample"
+
+[deps]
+
+source_file="res://sfx/water-drain.wav"
+source_md5="8217baf8f39d82db80aa9fce842b47d7"
+
+dest_files=[ "res://.import/water-drain.wav-da3916e93d93dd63d2585fa4fa096bf0.sample" ]
+dest_md5="6d63723ecdac5517aa1e3f4fe002149d"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bubbles.wav-4877cbc4f19741a0c629eca34e19a9c1.sample"
+
+[deps]
+
+source_file="res://sfx/bubbles.wav"
+source_md5="5ded03640033bcd4ad064eb0518d6fa4"
+
+dest_files=[ "res://.import/bubbles.wav-4877cbc4f19741a0c629eca34e19a9c1.sample" ]
+dest_md5="f92918df2429ffd782a91f3a67d03ccb"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
